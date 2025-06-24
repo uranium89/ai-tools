@@ -340,6 +340,440 @@ export const MOCK_AI_TOOLS: AITool[] = [
     apiAvailable: true,
     apiUrl: 'https://www.perplexity.ai/api',
     tags: ['search engine', 'research assistant', 'knowledge discovery']
+  },
+  {
+    id: 'runwayml',
+    name: 'RunwayML',
+    description: 'Next-generation AI creative suite for video editing, image generation, and 3D content creation.',
+    categories: ['video-generation', 'image-generation', 'creativity'],
+    url: 'https://runwayml.com',
+    logoUrl: '/ai-tools/runwayml-logo.svg',
+    accessLevel: 'freemium',
+    pricingUrl: 'https://runwayml.com/pricing/',
+    features: [
+      'Text-to-video generation',
+      'Image generation (Gen-1, Gen-2)',
+      'Video editing tools',
+      'Green screen and inpainting',
+      '3D texture generation'
+    ],
+    rating: 4.5,
+    reviewCount: 6000,
+    popularityScore: 88,
+    apiAvailable: true,
+    apiUrl: 'https://runwayml.com/api-docs/',
+    tags: ['video editing', 'ai video', 'image generation', 'creative suite']
+  },
+  {
+    id: 'synthesys',
+    name: 'Synthesys',
+    description: 'AI video and voice platform creating realistic human-like voices and stunning videos with AI avatars.',
+    categories: ['video-generation', 'audio-generation', 'business'],
+    url: 'https://synthesys.io',
+    logoUrl: '/ai-tools/synthesys-logo.svg',
+    accessLevel: 'paid',
+    pricingUrl: 'https://synthesys.io/pricing/',
+    features: [
+      'AI video generation',
+      'AI voiceovers',
+      'Custom avatars',
+      'Multi-language support',
+      'Video templates'
+    ],
+    rating: 4.3,
+    reviewCount: 2200,
+    popularityScore: 70,
+    apiAvailable: true,
+    apiUrl: 'https://synthesys.io/api/',
+    tags: ['ai video', 'ai avatar', 'voiceover', 'marketing video']
+  },
+  {
+    id: 'soundraw',
+    name: 'Soundraw',
+    description: 'AI music generator that allows you to create original songs and background music with ease.',
+    categories: ['audio-generation', 'creativity'],
+    url: 'https://soundraw.io',
+    logoUrl: '/ai-tools/soundraw-logo.svg',
+    accessLevel: 'freemium',
+    pricingUrl: 'https://soundraw.io/pricing',
+    features: [
+      'AI music generation',
+      'Genre selection',
+      'Instrument customization',
+      'Song length control',
+      'Royalty-free music'
+    ],
+    rating: 4.2,
+    reviewCount: 1500,
+    popularityScore: 68,
+    apiAvailable: false,
+    tags: ['music creation', 'background music', 'royalty-free']
+  },
+  {
+    id: 'fireflies-ai',
+    name: 'Fireflies.ai',
+    description: 'AI meeting assistant that records, transcribes, and summarizes your meetings.',
+    categories: ['productivity', 'business', 'audio-generation'],
+    url: 'https://fireflies.ai',
+    logoUrl: '/ai-tools/fireflies-ai-logo.svg',
+    accessLevel: 'freemium',
+    pricingUrl: 'https://fireflies.ai/pricing',
+    features: [
+      'Meeting transcription',
+      'AI summaries',
+      'Speaker identification',
+      'Searchable conversations',
+      'Integrations with conferencing tools'
+    ],
+    rating: 4.6,
+    reviewCount: 7500,
+    popularityScore: 85,
+    apiAvailable: true,
+    apiUrl: 'https://fireflies.ai/api',
+    tags: ['meeting assistant', 'transcription', 'productivity tool', 'notetaking']
+  },
+  {
+    id: 'beautiful-ai',
+    name: 'Beautiful.ai',
+    description: 'AI presentation maker that designs beautiful slides for you, leveraging smart templates.',
+    categories: ['productivity', 'business', 'image-generation'],
+    url: 'https://www.beautiful.ai',
+    logoUrl: '/ai-tools/beautiful-ai-logo.svg',
+    accessLevel: 'paid',
+    pricingUrl: 'https://www.beautiful.ai/pricing',
+    features: [
+      'Smart slide templates',
+      'AI-powered design',
+      'Content suggestions',
+      'Brand consistency',
+      'Collaboration features'
+    ],
+    rating: 4.3,
+    reviewCount: 2800,
+    popularityScore: 76,
+    apiAvailable: false,
+    tags: ['presentations', 'slides', 'design tool']
+  },
+  {
+    id: 'heygen',
+    name: 'HeyGen',
+    description: 'An AI video generation platform that helps you create engaging videos with AI avatars and voiceovers.',
+    categories: ['video-generation', 'marketing', 'business'],
+    url: 'https://www.heygen.com',
+    logoUrl: '/ai-tools/heygen-logo.svg',
+    accessLevel: 'freemium',
+    pricingUrl: 'https://www.heygen.com/pricing',
+    features: [
+      'AI avatar video creation',
+      'Text-to-speech in multiple languages',
+      'Customizable avatars',
+      'Video templates for various use cases',
+      'API access for integration'
+    ],
+    rating: 4.7,
+    reviewCount: 4000,
+    popularityScore: 89,
+    isNew: true,
+    apiAvailable: true,
+    apiUrl: 'https://docs.heygen.com/reference/api-reference',
+    tags: ['ai video', 'marketing video', 'explainer video', 'avatar']
+  },
+  {
+    id: 'pictory',
+    name: 'Pictory',
+    description: 'AI video creator that quickly turns text, images, and audio into stunning videos.',
+    categories: ['video-generation', 'text-generation', 'marketing'],
+    url: 'https://pictory.ai',
+    logoUrl: '/ai-tools/pictory-logo.svg',
+    accessLevel: 'paid',
+    pricingUrl: 'https://pictory.ai/pricing/',
+    features: [
+      'Text to video creation',
+      'Article to video',
+      'Automatic captioning',
+      'Video editing features',
+      'Royalty-free media library'
+    ],
+    rating: 4.4,
+    reviewCount: 1900,
+    popularityScore: 73,
+    apiAvailable: false,
+    tags: ['video editor', 'content marketing', 'social media video']
+  },
+  {
+    id: 'browse-ai',
+    name: 'Browse AI',
+    description: 'The easiest way to extract and monitor data from any website without writing any code.',
+    categories: ['data-analysis', 'productivity', 'business'],
+    url: 'https://www.browse.ai',
+    logoUrl: '/ai-tools/browse-ai-logo.svg',
+    accessLevel: 'freemium',
+    pricingUrl: 'https://www.browse.ai/pricing',
+    features: [
+      'Web scraping',
+      'Data extraction',
+      'Website monitoring',
+      'No-code interface',
+      'Integrations (Zapier, Google Sheets)'
+    ],
+    rating: 4.5,
+    reviewCount: 1200,
+    popularityScore: 71,
+    isTrending: true,
+    apiAvailable: true,
+    apiUrl: 'https://www.browse.ai/docs/api',
+    tags: ['web scraping', 'data extraction', 'automation', 'no-code']
+  },
+  {
+    id: 'superhuman',
+    name: 'Superhuman',
+    description: 'The fastest email experience in the world, powered by AI features for quick responses and summaries.',
+    categories: ['productivity', 'business', 'text-generation'],
+    url: 'https://superhuman.com',
+    logoUrl: '/ai-tools/superhuman-logo.svg',
+    accessLevel: 'paid',
+    pricingUrl: 'https://superhuman.com/pricing',
+    features: [
+      'AI email writing',
+      'Email summarization',
+      'Undo send',
+      'Scheduled send',
+      'Reminders and follow-ups'
+    ],
+    rating: 4.7,
+    reviewCount: 3500,
+    popularityScore: 81,
+    apiAvailable: false,
+    tags: ['email client', 'email productivity', 'ai assistant']
+  },
+  {
+    id: 'synthesia',
+    name: 'Synthesia',
+    description: 'AI video generation platform for creating professional videos at scale with AI avatars.',
+    categories: ['video-generation', 'business', 'education'],
+    url: 'https://www.synthesia.io',
+    logoUrl: '/ai-tools/synthesia-logo.svg',
+    accessLevel: 'paid',
+    pricingUrl: 'https://www.synthesia.io/pricing',
+    features: [
+      'AI video avatars',
+      'Text-to-video',
+      'Custom branding',
+      'Multi-language support',
+      'Screen recorder'
+    ],
+    rating: 4.8,
+    reviewCount: 5000,
+    popularityScore: 90,
+    apiAvailable: true,
+    apiUrl: 'https://docs.synthesia.io/reference/api-overview',
+    tags: ['ai video', 'corporate video', 'e-learning', 'avatar']
+  },
+  {
+    id: 'grammarly-go',
+    name: 'GrammarlyGo',
+    description: 'Grammarly\'s generative AI writing assistant for instant drafts, rewrites, and ideas.',
+    categories: ['text-generation', 'productivity', 'education'],
+    url: 'https://www.grammarly.com/go',
+    logoUrl: '/ai-tools/grammarly-go-logo.svg',
+    accessLevel: 'freemium',
+    pricingUrl: 'https://www.grammarly.com/pricing',
+    features: [
+      'AI writing assistance',
+      'Text generation',
+      'Rewriting and rephrasing',
+      'Tone adjustments',
+      'Contextual suggestions'
+    ],
+    rating: 4.6,
+    reviewCount: 9000,
+    popularityScore: 87,
+    isNew: true,
+    apiAvailable: false,
+    tags: ['writing assistant', 'grammar checker', 'content creation']
+  },
+  {
+    id: 'descript-ai',
+    name: 'Descript AI',
+    description: 'Advanced AI features within Descript for enhancing audio and video editing workflows, including filler word removal and eye contact correction.',
+    categories: ['audio-generation', 'video-generation', 'productivity'],
+    url: 'https://www.descript.com/features/ai', // Specific AI features page if available
+    logoUrl: '/ai-tools/descript-logo.svg', // Reusing Descript logo
+    accessLevel: 'freemium',
+    pricingUrl: 'https://www.descript.com/pricing',
+    features: [
+      'AI transcription accuracy',
+      'Filler word removal (AI Overdub)',
+      'Eye contact correction (Studio Sound)',
+      'Silence removal',
+      'AI-powered editing suggestions'
+    ],
+    rating: 4.7,
+    reviewCount: 6500, // Combined with main Descript reviews
+    popularityScore: 84,
+    apiAvailable: false,
+    tags: ['video editing', 'audio editing', 'ai enhanced editing']
+  },
+  {
+    id: 'replicate',
+    name: 'Replicate',
+    description: 'Run open-source AI models with a few lines of code, offering a wide range of models for various tasks.',
+    categories: ['development', 'image-generation', 'text-generation', 'audio-generation', 'video-generation'],
+    url: 'https://replicate.com',
+    logoUrl: '/ai-tools/replicate-logo.svg',
+    accessLevel: 'freemium',
+    pricingUrl: 'https://replicate.com/pricing',
+    features: [
+      'Access to open-source models (e.g., Stable Diffusion, LLMs)',
+      'API for running models',
+      'Cloud hosting for models',
+      'Easy integration',
+      'Scalable infrastructure'
+    ],
+    rating: 4.6,
+    reviewCount: 1800,
+    popularityScore: 78,
+    apiAvailable: true,
+    apiUrl: 'https://replicate.com/docs/api',
+    tags: ['developer tool', 'ai models', 'api', 'open-source AI']
+  },
+  {
+    id: 'voiceflow',
+    name: 'Voiceflow',
+    description: 'AI design platform for conversational AI, enabling teams to design, prototype, and launch chatbots and voice assistants.',
+    categories: ['development', 'productivity', 'business'],
+    url: 'https://www.voiceflow.com',
+    logoUrl: '/ai-tools/voiceflow-logo.svg',
+    accessLevel: 'freemium',
+    pricingUrl: 'https://www.voiceflow.com/pricing',
+    features: [
+      'Chatbot design',
+      'Voice assistant prototyping',
+      'No-code interface',
+      'Collaboration tools',
+      'Integrations (Google Assistant, Alexa, custom channels)'
+    ],
+    rating: 4.4,
+    reviewCount: 1100,
+    popularityScore: 70,
+    apiAvailable: false,
+    tags: ['chatbot development', 'voice assistant', 'no-code', 'conversational AI']
+  },
+  {
+    id: 'tabnine',
+    name: 'Tabnine',
+    description: 'AI code completion tool for developers, providing intelligent code suggestions for various programming languages and IDEs.',
+    categories: ['code-generation', 'development', 'productivity'],
+    url: 'https://www.tabnine.com',
+    logoUrl: '/ai-tools/tabnine-logo.svg',
+    accessLevel: 'freemium',
+    pricingUrl: 'https://www.tabnine.com/pricing',
+    features: [
+      'AI code completion',
+      'Context-aware suggestions',
+      'Multi-language support',
+      'IDE integration',
+      'Private code models'
+    ],
+    rating: 4.5,
+    reviewCount: 2000,
+    popularityScore: 75,
+    apiAvailable: false,
+    tags: ['coding assistant', 'developer tool', 'autocompletion', 'IDE plugin']
+  },
+  {
+    id: 'eight-fold-ai',
+    name: 'Eightfold AI',
+    description: 'AI-powered talent intelligence platform for recruiting, retention, and workforce management.',
+    categories: ['business', 'productivity'],
+    url: 'https://www.eightfold.ai',
+    logoUrl: '/ai-tools/eightfold-ai-logo.svg',
+    accessLevel: 'paid',
+    features: [
+      'Talent acquisition',
+      'Talent management',
+      'Diversity and inclusion insights',
+      'Candidate matching',
+      'Workforce planning'
+    ],
+    rating: 4.3,
+    reviewCount: 900,
+    popularityScore: 65,
+    apiAvailable: false,
+    tags: ['HR Tech', 'recruitment', 'talent management']
+  },
+  {
+    id: 'runway-gen-2',
+    name: 'RunwayML Gen-2',
+    description: 'Generative AI model by RunwayML capable of creating realistic videos from text, images, or video clips.',
+    categories: ['video-generation', 'creativity'],
+    url: 'https://runwayml.com/gen-2/',
+    logoUrl: '/ai-tools/runwayml-logo.svg', // Reusing RunwayML logo
+    accessLevel: 'freemium',
+    pricingUrl: 'https://runwayml.com/pricing/',
+    features: [
+      'Text to video',
+      'Image to video',
+      'Stylization (video to video)',
+      'Motion brush',
+      'Frame interpolation'
+    ],
+    rating: 4.6,
+    reviewCount: 4500, // Shared with RunwayML
+    popularityScore: 89,
+    isTrending: true,
+    apiAvailable: true,
+    apiUrl: 'https://runwayml.com/api-docs/',
+    tags: ['ai video', 'generative video', 'video creation']
+  },
+  {
+    id: 'midjourney-v6',
+    name: 'Midjourney V6',
+    description: 'The latest iteration of Midjourney, offering significantly improved image generation quality and coherence.',
+    categories: ['image-generation', 'creativity'],
+    url: 'https://www.midjourney.com/showcase/v6/', // Placeholder for V6 specific page
+    logoUrl: '/ai-tools/midjourney-logo.svg', // Reusing Midjourney logo
+    accessLevel: 'paid',
+    pricingUrl: 'https://www.midjourney.com/pricing',
+    features: [
+      'Enhanced image quality and realism',
+      'Improved prompt understanding',
+      'Better text rendering within images',
+      'More consistent character styles',
+      'Increased aesthetic control'
+    ],
+    rating: 4.8,
+    reviewCount: 19000, // Shared with Midjourney
+    popularityScore: 95,
+    isNew: true,
+    isTrending: true,
+    apiAvailable: false,
+    tags: ['text-to-image', 'art generator', 'image quality', 'latest AI']
+  },
+  {
+    id: 'chatgpt-4o',
+    name: 'ChatGPT-4o',
+    description: 'OpenAI\'s flagship multimodal model, offering human-level response times and capabilities across text, audio, and vision.',
+    categories: ['text-generation', 'audio-generation', 'image-generation', 'productivity', 'education'],
+    url: 'https://openai.com/chatgpt/team/', // Placeholder for 4o specifics
+    logoUrl: '/ai-tools/chatgpt-logo.svg', // Reusing ChatGPT logo
+    accessLevel: 'freemium',
+    pricingUrl: 'https://openai.com/pricing',
+    features: [
+      'Multimodal input/output (text, audio, vision)',
+      'Real-time conversation',
+      'Improved reasoning across modalities',
+      'Faster response times',
+      'Enhanced creative capabilities'
+    ],
+    rating: 4.9,
+    reviewCount: 28000, // Shared with ChatGPT
+    popularityScore: 99,
+    isNew: true,
+    isTrending: true,
+    apiAvailable: true,
+    apiUrl: 'https://platform.openai.com/docs/models/gpt-4o',
+    tags: ['chatbot', 'multimodal AI', 'next-gen AI', 'language model', 'real-time AI']
   }
 ];
 
@@ -358,5 +792,5 @@ export const TOOL_CATEGORIES: { id: ToolCategory; label: string; icon: string }[
   { id: 'business', label: 'Business', icon: 'briefcase' },
   { id: 'education', label: 'Education', icon: 'school' },
   { id: 'development', label: 'Development', icon: 'terminal' },
-  { id: 'other', label: 'Other', icon: 'more' },
+  { id: 'other', label: 'Other', icon: 'more' }
 ];

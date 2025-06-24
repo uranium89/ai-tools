@@ -5,7 +5,6 @@ import { persist } from 'zustand/middleware';
 import { 
   AITool, 
   ToolFilters, 
-  ToolCollection, 
   UserPreferences 
 } from '@/types/ai-tools';
 
@@ -14,7 +13,6 @@ interface AIToolState {
   filteredTools: AITool[];
   filters: ToolFilters;
   userPreferences: UserPreferences;
-  collections: ToolCollection[];
   searchTerm: string;
   isLoading: boolean;
   error: string | null;
@@ -26,16 +24,12 @@ interface AIToolState {
   addToFavorites: (toolId: string) => void;
   removeFromFavorites: (toolId: string) => void;
   addRecentTool: (toolId: string) => void;
-  createCollection: (collection: Omit<ToolCollection, 'id' | 'createdAt'>) => void;
-  addToolToCollection: (collectionId: string, tool: AITool) => void;
-  removeToolFromCollection: (collectionId: string, toolId: string) => void;
   updateUserPreferences: (preferences: Partial<UserPreferences>) => void;
 }
 
 const DEFAULT_USER_PREFERENCES: UserPreferences = {
   favoriteTools: [],
   recentTools: [],
-  collections: [],
   preferredCategories: [],
   theme: 'system',
   compactView: false,
@@ -48,7 +42,6 @@ export const useAIToolStore = create<AIToolState>()(
       filteredTools: [],
       filters: {},
       userPreferences: DEFAULT_USER_PREFERENCES,
-      collections: [],
       searchTerm: '',
       isLoading: false,
       error: null,
@@ -98,65 +91,6 @@ export const useAIToolStore = create<AIToolState>()(
         set({ userPreferences });
       },
 
-      createCollection: (collectionData) => {
-        const newCollection: ToolCollection = {
-          ...collectionData,
-          id: generateId(),
-          createdAt: new Date(),
-          tools: [],
-        };
-        const collections = [...get().collections, newCollection];
-        set({ collections });
-        
-        // Also update in user preferences
-        const userPreferences = { ...get().userPreferences };
-        userPreferences.collections = [...userPreferences.collections, newCollection];
-        set({ userPreferences });
-      },
-
-      addToolToCollection: (collectionId, tool) => {
-        const collections = get().collections.map(collection => {
-          if (collection.id === collectionId) {
-            // Check if tool already exists in collection
-            if (!collection.tools.find(t => t.id === tool.id)) {
-              return {
-                ...collection,
-                tools: [...collection.tools, tool],
-                updatedAt: new Date(),
-              };
-            }
-          }
-          return collection;
-        });
-        
-        set({ collections });
-        
-        // Also update in user preferences
-        const userPreferences = { ...get().userPreferences };
-        userPreferences.collections = collections;
-        set({ userPreferences });
-      },
-
-      removeToolFromCollection: (collectionId, toolId) => {
-        const collections = get().collections.map(collection => {
-          if (collection.id === collectionId) {
-            return {
-              ...collection,
-              tools: collection.tools.filter(tool => tool.id !== toolId),
-              updatedAt: new Date(),
-            };
-          }
-          return collection;
-        });
-        
-        set({ collections });
-        
-        // Also update in user preferences
-        const userPreferences = { ...get().userPreferences };
-        userPreferences.collections = collections;
-        set({ userPreferences });
-      },
-
       updateUserPreferences: (preferences) => {
         set({ 
           userPreferences: { 
@@ -170,7 +104,6 @@ export const useAIToolStore = create<AIToolState>()(
       name: 'ai-tools-storage',
       partialize: (state) => ({
         userPreferences: state.userPreferences,
-        collections: state.collections,
       }),
     }
   )
@@ -247,9 +180,4 @@ function filterTools(tools: AITool[], filters: ToolFilters, searchTerm: string):
   }
 
   return filtered;
-}
-
-function generateId(): string {
-  return Math.random().toString(36).substring(2, 15) + 
-         Math.random().toString(36).substring(2, 15);
 }

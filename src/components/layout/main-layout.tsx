@@ -59,15 +59,6 @@ const MainNav = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => 
         All Tools
       </Link>
       <Link
-        href="/collections"
-        className={cn(
-          'text-sm font-medium transition-colors hover:text-primary',
-          pathname === '/collections' ? 'text-primary' : 'text-muted-foreground'
-        )}
-      >
-        Collections
-      </Link>
-      <Link
         href="/categories"
         className={cn(
           'text-sm font-medium transition-colors hover:text-primary',
@@ -116,17 +107,6 @@ const MobileNav = () => {
               )}
             >
               All Tools
-            </Link>
-          </SheetClose>
-          <SheetClose asChild>
-            <Link
-              href="/collections"
-              className={cn(
-                'flex items-center px-2 py-1 text-lg font-medium rounded-md',
-                pathname === '/collections' ? 'bg-muted' : 'hover:bg-muted'
-              )}
-            >
-              Collections
             </Link>
           </SheetClose>
           <SheetClose asChild>

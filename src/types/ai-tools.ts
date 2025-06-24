@@ -48,18 +48,6 @@ export interface UserAITool extends AITool {
   personalNotes?: string;
 }
 
-// Tool Collection interface
-export interface ToolCollection {
-  id: string;
-  name: string;
-  description: string;
-  tools: AITool[];
-  isPublic: boolean;
-  createdBy?: string;
-  createdAt: Date;
-  updatedAt?: Date;
-}
-
 // Search filters interface
 export interface ToolFilters {
   categories?: ToolCategory[];
@@ -75,7 +63,6 @@ export interface ToolFilters {
 export interface UserPreferences {
   favoriteTools: string[]; // Tool IDs
   recentTools: string[]; // Tool IDs
-  collections: ToolCollection[];
   preferredCategories: ToolCategory[];
   theme: 'light' | 'dark' | 'system';
   compactView: boolean;
